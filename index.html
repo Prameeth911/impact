@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpactCart — Shop with Purpose. Create an Impact.</title>
+    <meta name="description" content="ImpactCart is a modern social-impact e-commerce platform where every purchase creates measurable positive social and environmental outcomes.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <aside class="top-notice-bar" aria-label="Announcement">
+        🌱 <strong>Make an Impact:</strong> Every order planted in March receives 2x Impact Points &amp; free zero-waste shipping! <a href="impact.html">See our impact dashboard</a>
+    </aside>
+
+    <!-- Global Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo" aria-label="ImpactCart Home">
+                <div class="logo-icon-wrap">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="desktop-nav" aria-label="Primary Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="stories.html" class="nav-link">Stories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Header Action Icons -->
+            <div class="header-actions">
+                <button class="header-action-btn search-trigger-btn" aria-label="Open Search Dialog" title="Search Products">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <a href="wishlist.html" class="header-action-btn" aria-label="View Wishlist" title="Your Wishlist">
+                    <i class="far fa-heart"></i>
+                    <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
+                </a>
+
+                <a href="cart.html" class="header-action-btn" aria-label="View Shopping Cart" title="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge-count cart-count-badge" style="display: none;">0</span>
+                </a>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="menu-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="drawer-header">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon-wrap">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+            <button class="header-action-btn nav-overlay" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="drawer-nav-list">
+            <a href="index.html" class="drawer-nav-link active"><i class="fas fa-home"></i> Home</a>
+            <a href="products.html" class="drawer-nav-link"><i class="fas fa-th-large"></i> Products</a>
+            <a href="categories.html" class="drawer-nav-link"><i class="fas fa-tags"></i> Categories</a>
+            <a href="impact.html" class="drawer-nav-link"><i class="fas fa-chart-line"></i> Impact Dashboard</a>
+            <a href="stories.html" class="drawer-nav-link"><i class="fas fa-book-reader"></i> Impact Stories</a>
+            <a href="about.html" class="drawer-nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html" class="drawer-nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+            <a href="wishlist.html" class="drawer-nav-link"><i class="fas fa-heart text-danger"></i> Wishlist</a>
+            <a href="cart.html" class="drawer-nav-link"><i class="fas fa-shopping-cart text-emerald"></i> Cart</a>
+        </nav>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-label="Search Products">
+        <div class="search-modal-card">
+            <form id="global-search-form" class="search-input-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="global-search-input" placeholder="Search eco products, artisan crafts, notebooks..." autocomplete="off">
+                <button type="button" id="close-search-modal" class="search-close-btn" aria-label="Close Search">&times;</button>
+            </form>
+            <div class="quick-search-tags">
+                <span>Trending Searches:</span>
+                <a href="products.html?search=notebook" class="quick-tag">Notebook</a>
+                <a href="products.html?search=bamboo" class="quick-tag">Bamboo</a>
+                <a href="products.html?search=jute" class="quick-tag">Jute Bag</a>
+                <a href="products.html?category=education" class="quick-tag">Education</a>
+                <a href="products.html?category=eco-friendly" class="quick-tag">Zero Waste</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="section-badge">
+                            <i class="fas fa-heart"></i> Social Impact Shopping
+                        </div>
+                        <h1 class="heading-xl hero-title">
+                            Shop with Purpose. <br>
+                            <span class="gradient-text">Create an Impact.</span>
+                        </h1>
+                        <p class="hero-description">
+                            Every purchase can do more. Discover curated products that support local communities, empower traditional creators, and encourage a more sustainable future.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="products.html" class="btn btn-primary btn-lg">
+                                <i class="fas fa-shopping-bag"></i> Explore Products
+                            </a>
+                            <a href="impact.html" class="btn btn-outline btn-lg">
+                                <i class="fas fa-chart-pie"></i> See Our Impact
+                            </a>
+                        </div>
+                        <div class="hero-trust-badges">
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i> 100% Verified Artisans
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-seedling"></i> Zero-Plastic Packaging
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-shield-alt"></i> Transparent Metrics
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-visual-card">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Sustainable shopping and positive impact" class="hero-main-img">
+                            
+                            <!-- Floating Badge 1 -->
+                            <div class="floating-badge badge-top">
+                                <div class="floating-badge-icon green">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="floating-badge-text">
+                                    <h4>18,400+ kg</h4>
+                                    <p>Plastic Waste Diverted</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 2 -->
+                            <div class="floating-badge badge-bottom">
+                                <div class="floating-badge-icon blue">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="floating-badge-text">
+                                    <h4>12,500+</h4>
+                                    <p>Learning Kits Sponsored</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Animated Statistics -->
+        <section class="stats-section" aria-label="Community Impact Statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-icon text-blue"><i class="fas fa-box-open"></i></span>
+                        <div class="stat-number" data-target="12500" data-suffix="+">0</div>
+                        <div class="stat-label">Products Supported</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon text-emerald"><i class="fas fa-users"></i></span>
+                        <div class="stat-number" data-target="8450" data-suffix="+">0</div>
+                        <div class="stat-label">Conscious Customers</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon text-amber"><i class="fas fa-hands-helping"></i></span>
+                        <div class="stat-number" data-target="25600" data-suffix="+">0</div>
+                        <div class="stat-label">Community Benefits</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon text-emerald"><i class="fas fa-recycle"></i></span>
+                        <div class="stat-number" data-target="18400" data-suffix=" kg">0</div>
+                        <div class="stat-label">Waste Reduced</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Showcase Section -->
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Explore Categories</div>
+                    <h2 class="heading-lg section-title">Shop by Social &amp; Environmental Cause</h2>
+                    <p class="section-desc">Choose what matters to you. Each category funds tangible positive change in communities across India.</p>
+                </div>
+
+                <div class="categories-grid" id="home-categories-grid">
+                    <!-- Populated dynamically / static fallback -->
+                    <div class="category-card" style="--cat-accent: #2563eb;">
+                        <div class="category-icon-box"><i class="fas fa-book-open"></i></div>
+                        <h3>Education</h3>
+                        <p>Learning materials, seed notebooks &amp; solar lights for students.</p>
+                        <a href="products.html?category=education" class="category-link-text">Browse Education <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card" style="--cat-accent: #16a34a;">
+                        <div class="category-icon-box"><i class="fas fa-leaf"></i></div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Bamboo bottles, upcycled bags &amp; zero-waste essentials.</p>
+                        <a href="products.html?category=eco-friendly" class="category-link-text">Browse Eco <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card" style="--cat-accent: #d97706;">
+                        <div class="category-icon-box"><i class="fas fa-paint-brush"></i></div>
+                        <h3>Handmade</h3>
+                        <p>Terracotta pottery, hand-spun cotton &amp; wooden crafts.</p>
+                        <a href="products.html?category=handmade" class="category-link-text">Browse Handmade <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card" style="--cat-accent: #0d9488;">
+                        <div class="category-icon-box"><i class="fas fa-handshake"></i></div>
+                        <h3>Community</h3>
+                        <p>Fair-trade mountain teas &amp; weaver self-help collectives.</p>
+                        <a href="products.html?category=community" class="category-link-text">Browse Community <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="category-card" style="--cat-accent: #9333ea;">
+                        <div class="category-icon-box"><i class="fas fa-gift"></i></div>
+                        <h3>Meaningful Gifts</h3>
+                        <p>Curated gift boxes that tell stories of positive transformation.</p>
+                        <a href="products.html?category=gifts" class="category-link-text">Browse Gifts <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="section section-subtle">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Impact Picks</div>
+                    <h2 class="heading-lg section-title">Featured Products with Purpose</h2>
+                    <p class="section-desc">Handcrafted with care, priced fairly, and guaranteed to spark positive change.</p>
+                </div>
+
+                <div class="product-grid" id="home-featured-products-grid">
+                    <!-- Products will be rendered dynamically by JavaScript -->
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="products.html" class="btn btn-outline btn-lg">
+                        <i class="fas fa-th"></i> View All 24 Products
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Preview Section -->
+        <section class="container">
+            <div class="impact-preview-section">
+                <div class="impact-preview-grid">
+                    <div class="impact-preview-content">
+                        <div class="section-badge blue" style="background: rgba(255,255,255,0.2); color: #ffffff;">
+                            <i class="fas fa-calculator"></i> Transparent Mathematics
+                        </div>
+                        <h2 class="heading-lg">Your Cart Can Make a Lasting Difference</h2>
+                        <p>Unlike regular stores where your money ends at the checkout, ImpactCart shows you the real-time social return generated by your cart items.</p>
+                        <a href="impact.html" class="btn btn-primary btn-lg" style="background: #ffffff; color: var(--primary-dark);">
+                            <i class="fas fa-chart-line"></i> Explore Impact Dashboard
+                        </a>
+                    </div>
+
+                    <div class="impact-calc-card">
+                        <div class="impact-flow-step">
+                            <div>
+                                <small style="color: #a7f3d0; text-transform: uppercase; font-weight: 700;">🛒 Example Purchase</small>
+                                <h3 style="color: #ffffff; font-size: 1.5rem; margin-top: 2px;">Cart Total: ₹1,250</h3>
+                            </div>
+                            <span class="badge-count" style="position: static; font-size: 0.9rem; padding: 4px 10px; background: #10b981;">Active Order</span>
+                        </div>
+
+                        <div class="impact-arrow">
+                            <i class="fas fa-arrow-down"></i> Generates Verified Social Return
+                        </div>
+
+                        <div class="impact-outcomes-list">
+                            <div class="impact-outcome-item">
+                                <i class="fas fa-book-reader text-amber"></i>
+                                <span>📚 3 Learning Kits Sponsored</span>
+                            </div>
+                            <div class="impact-outcome-item">
+                                <i class="fas fa-leaf text-emerald"></i>
+                                <span>🌱 2 Eco Sustainable Choices</span>
+                            </div>
+                            <div class="impact-outcome-item">
+                                <i class="fas fa-hands-helping text-blue"></i>
+                                <span>👥 4 Community Artisan Benefits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Impact Stories Teaser -->
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Real Stories</div>
+                    <h2 class="heading-lg section-title">Stories Behind Every Creation</h2>
+                    <p class="section-desc">Meet the artisans, students, and forest keepers whose lives are enriched by your conscious choices.</p>
+                </div>
+
+                <div class="product-grid" id="home-stories-teaser-grid" style="grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));">
+                    <!-- Populated by script -->
+                </div>
+
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="stories.html" class="btn btn-outline">
+                        Read All 6 Impact Stories <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Info -->
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo" style="color: #ffffff;">
+                        <div class="logo-icon-wrap">
+                            <i class="fas fa-shopping-basket"></i>
+                        </div>
+                        <div class="brand-name">Impact<span style="color: #34d399;">Cart</span></div>
+                    </a>
+                    <p>“Shop with Purpose. Create an Impact.” A conscious e-commerce ecosystem empowering artisans, students, and sustainable living.</p>
+                    <div class="footer-social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Cause Categories</a></li>
+                        <li><a href="impact.html">Impact Dashboard</a></li>
+                        <li><a href="stories.html">Impact Stories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Support -->
+                <div class="footer-column">
+                    <h4>Customer Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="contact.html#faq">FAQ &amp; Help Center</a></li>
+                        <li><a href="contact.html#shipping">Shipping Information</a></li>
+                        <li><a href="contact.html#returns">Returns &amp; Refunds</a></li>
+                        <li><a href="wishlist.html">Your Wishlist</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter / Impact Pledge -->
+                <div class="footer-column">
+                    <h4>Stay Inspired</h4>
+                    <p style="font-size: 0.875rem; color: #94a3b8; margin-bottom: 1rem;">Subscribe to our monthly impact digest with artisan stories and sustainable lifestyle guides.</p>
+                    <form class="footer-newsletter" onsubmit="event.preventDefault(); Toast.show('Thank you for subscribing to ImpactCart! 🌿', 'success'); this.reset();">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address for newsletter">
+                        <button type="submit" class="btn btn-primary btn-block btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ImpactCart. All rights reserved. Built with pride for social change.</p>
+                <p>Designed for conscious shoppers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Render 6 Featured Products
+            const featuredContainer = document.getElementById("home-featured-products-grid");
+            if (featuredContainer) {
+                const featured = IMPACT_PRODUCTS.filter(p => p.isFeatured).slice(0, 6);
+                featuredContainer.innerHTML = featured.map(p => renderProductCard(p)).join("");
+            }
+
+            // Render 3 Story Teasers
+            const storiesContainer = document.getElementById("home-stories-teaser-grid");
+            if (storiesContainer) {
+                const stories = IMPACT_STORIES_DATA.slice(0, 3);
+                storiesContainer.innerHTML = stories.map(s => `
+                    <article class="story-card">
+                        <img src="${s.image}" alt="${s.title}" class="story-card-img" loading="lazy">
+                        <div class="story-card-body">
+                            <span class="product-category-label">${s.categoryBadge}</span>
+                            <h3 style="margin-bottom: 0.5rem;"><a href="stories.html#story-${s.id}">${s.title}</a></h3>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">${s.excerpt}</p>
+                            <div class="story-quote-box">"${s.quote}"</div>
+                            <a href="stories.html#story-${s.id}" class="btn btn-outline btn-sm" style="align-self: flex-start; margin-top: auto;">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                `).join("");
+            }
+        });
+    </script>
+</body>
+</html>

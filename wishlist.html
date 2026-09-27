@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wishlist — ImpactCart</title>
+    <meta name="description" content="View and manage your saved social-impact favorites.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Notice Bar -->
+    <aside class="top-notice-bar" aria-label="Announcement">
+        🌱 <strong>Make an Impact:</strong> Every order planted in March receives 2x Impact Points &amp; free zero-waste shipping! <a href="impact.html">See our impact dashboard</a>
+    </aside>
+
+    <!-- Global Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand-logo" aria-label="ImpactCart Home">
+                <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Primary Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="stories.html" class="nav-link">Stories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="header-action-btn search-trigger-btn" aria-label="Open Search Dialog" title="Search Products">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <a href="wishlist.html" class="header-action-btn" aria-label="View Wishlist" title="Your Wishlist" style="color: var(--danger);">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
+                </a>
+
+                <a href="cart.html" class="header-action-btn" aria-label="View Shopping Cart" title="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge-count cart-count-badge" style="display: none;">0</span>
+                </a>
+
+                <button class="menu-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="drawer-header">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+            <button class="header-action-btn nav-overlay" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="drawer-nav-list">
+            <a href="index.html" class="drawer-nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="products.html" class="drawer-nav-link"><i class="fas fa-th-large"></i> Products</a>
+            <a href="categories.html" class="drawer-nav-link"><i class="fas fa-tags"></i> Categories</a>
+            <a href="impact.html" class="drawer-nav-link"><i class="fas fa-chart-line"></i> Impact Dashboard</a>
+            <a href="stories.html" class="drawer-nav-link"><i class="fas fa-book-reader"></i> Impact Stories</a>
+            <a href="about.html" class="drawer-nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html" class="drawer-nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+            <a href="wishlist.html" class="drawer-nav-link active"><i class="fas fa-heart text-danger"></i> Wishlist</a>
+            <a href="cart.html" class="drawer-nav-link"><i class="fas fa-shopping-cart text-emerald"></i> Cart</a>
+        </nav>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-label="Search Products">
+        <div class="search-modal-card">
+            <form id="global-search-form" class="search-input-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="global-search-input" placeholder="Search eco products, artisan crafts, notebooks..." autocomplete="off">
+                <button type="button" id="close-search-modal" class="search-close-btn" aria-label="Close Search">&times;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="section">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span>Saved Wishlist</span>
+            </nav>
+
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                <div class="section-badge"><i class="fas fa-heart"></i> Saved Favorites</div>
+                <h1 class="heading-lg">Your Purposeful Wishlist</h1>
+                <p class="section-desc">Keep track of products that inspire you and support meaningful community causes.</p>
+            </div>
+
+            <!-- Wishlist Products Grid -->
+            <div class="product-grid" id="wishlist-products-grid">
+                <!-- Dynamically populated -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="wishlist-empty-state" class="empty-state" style="display: none;">
+                <div class="empty-state-icon" style="color: #f43f5e;"><i class="far fa-heart"></i></div>
+                <h3>Your wishlist is empty</h3>
+                <p>You haven't saved any conscious products yet. Explore our sustainable collection to find items you love.</p>
+                <a href="products.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-shopping-bag"></i> Explore Products
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo" style="color: #ffffff;">
+                        <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                        <div class="brand-name">Impact<span style="color: #34d399;">Cart</span></div>
+                    </a>
+                    <p>“Shop with Purpose. Create an Impact.” A conscious e-commerce ecosystem empowering artisans, students, and sustainable living.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Cause Categories</a></li>
+                        <li><a href="impact.html">Impact Dashboard</a></li>
+                        <li><a href="stories.html">Impact Stories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Customer Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="contact.html#faq">FAQ &amp; Help Center</a></li>
+                        <li><a href="contact.html#shipping">Shipping Information</a></li>
+                        <li><a href="contact.html#returns">Returns &amp; Refunds</a></li>
+                        <li><a href="wishlist.html">Your Wishlist</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Stay Inspired</h4>
+                    <form class="footer-newsletter" onsubmit="event.preventDefault(); Toast.show('Subscribed! 🌱', 'success'); this.reset();">
+                        <input type="email" placeholder="Enter your email" required aria-label="Email">
+                        <button type="submit" class="btn btn-primary btn-block btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ImpactCart. All rights reserved.</p>
+                <p>Social Impact Shopping Platform.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.getElementById("wishlist-products-grid");
+            const emptyState = document.getElementById("wishlist-empty-state");
+
+            function renderWishlist() {
+                const wishlistIds = StateManager.getWishlist();
+                const savedProducts = IMPACT_PRODUCTS.filter(p => wishlistIds.includes(p.id));
+
+                if (savedProducts.length === 0) {
+                    grid.innerHTML = "";
+                    emptyState.style.display = "block";
+                } else {
+                    emptyState.style.display = "none";
+                    grid.innerHTML = savedProducts.map(product => {
+                        return `
+                            <article class="product-card">
+                                <div class="product-badge-wrap">
+                                    <span class="impact-badge ${product.impactType}">${product.badge}</span>
+                                </div>
+                                <button class="wishlist-toggle-btn active" onclick="removeFromWishlistPage(${product.id})" aria-label="Remove from wishlist" title="Remove from wishlist">
+                                    <i class="fas fa-trash-alt text-danger"></i>
+                                </button>
+                                <a href="product-details.html?id=${product.id}" class="product-img-link">
+                                    <img src="${product.image}" alt="${product.name}" class="product-img">
+                                </a>
+                                <div class="product-content">
+                                    <span class="product-category-label">${product.category}</span>
+                                    <h3 class="product-title">
+                                        <a href="product-details.html?id=${product.id}">${product.name}</a>
+                                    </h3>
+                                    <div class="product-rating">
+                                        <div class="stars-wrap">${renderStarRating(product.rating)}</div>
+                                        <span class="rating-number">(${product.reviewsCount})</span>
+                                    </div>
+                                    <div class="product-impact-hint">
+                                        <i class="fas fa-sparkles text-emerald"></i>
+                                        <span>+${product.impactPoints} Impact pts • ${product.impactSummary.wasteReducedKg > 0 ? `${product.impactSummary.wasteReducedKg}kg waste saved` : 'Education sponsor'}</span>
+                                    </div>
+                                    <div class="product-footer">
+                                        <div class="product-price-box">
+                                            <span class="current-price">₹${product.price}</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm" onclick="moveWishlistToCart(${product.id})">
+                                            <i class="fas fa-shopping-bag"></i> Move to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        `;
+                    }).join("");
+                }
+            }
+
+            window.removeFromWishlistPage = function(productId) {
+                StateManager.removeFromWishlist(productId);
+                renderWishlist();
+            };
+
+            window.moveWishlistToCart = function(productId) {
+                StateManager.addToCart(productId, 1);
+                StateManager.removeFromWishlist(productId);
+                renderWishlist();
+            };
+
+            window.addEventListener("wishlistUpdated", renderWishlist);
+            renderWishlist();
+        });
+    </script>
+</body>
+</html>

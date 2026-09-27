@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed Successfully! — ImpactCart</title>
+    <meta name="description" content="Thank you for shopping with purpose. Your conscious order has been verified and registered.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Global Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand-logo" aria-label="ImpactCart Home">
+                <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="impact.html" class="nav-link">Impact Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN SUCCESS CONTENT -->
+    <main class="section">
+        <div class="container success-container">
+            <!-- Animated Success Checkmark -->
+            <div class="success-icon-wrap">
+                <i class="fas fa-check"></i>
+            </div>
+
+            <div class="section-badge"><i class="fas fa-heart"></i> Order Confirmed</div>
+            <h1 class="heading-lg" style="margin-bottom: 0.5rem;">Order Placed Successfully!</h1>
+            <p class="text-lead" style="margin-bottom: 1rem;">“Thank you for shopping with purpose.”</p>
+            
+            <div>
+                <span class="order-id-badge" id="success-order-id">Order ID: IC2026-DEMO</span>
+            </div>
+
+            <!-- Receipt & Impact Certificate Card -->
+            <div class="success-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+                    <div>
+                        <small style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-weight: 700;">Order Total</small>
+                        <h2 style="font-size: 1.5rem; color: var(--text-main);" id="success-order-total">₹0</h2>
+                    </div>
+                    <div style="text-align: right;">
+                        <small style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; font-weight: 700;">Estimated Delivery</small>
+                        <div style="font-weight: 700; color: var(--primary-dark);" id="success-delivery-date">3 - 5 Business Days</div>
+                    </div>
+                </div>
+
+                <!-- Your Impact Section -->
+                <div class="cart-impact-card" style="margin-bottom: 1.5rem;">
+                    <h3 style="color: #065f46; font-size: 1.15rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-certificate text-emerald"></i> Your Verified Impact Certificate
+                    </h3>
+                    <p style="font-size: 0.875rem; color: #047857; margin-bottom: 1rem;">
+                        This order has officially generated and sponsored the following positive contributions:
+                    </p>
+
+                    <div class="impact-metric-row">
+                        <i class="fas fa-book-reader"></i>
+                        <span id="succ-learning-kits">0</span> Learning Kits Provided to Students
+                    </div>
+                    <div class="impact-metric-row">
+                        <i class="fas fa-recycle"></i>
+                        <span id="succ-waste-kg">0</span> kg Landfill Plastic &amp; Waste Diverted
+                    </div>
+                    <div class="impact-metric-row">
+                        <i class="fas fa-users"></i>
+                        <span id="succ-beneficiaries">0</span> Community Artisan Beneficiaries Supported
+                    </div>
+                    <div class="impact-metric-row">
+                        <i class="fas fa-leaf"></i>
+                        <span id="succ-eco-choices">0</span> Sustainable Eco-Friendly Product Choices
+                    </div>
+                </div>
+
+                <!-- Delivery Details Summary -->
+                <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); font-size: 0.9rem; line-height: 1.6;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;"><i class="fas fa-truck text-emerald"></i> Delivery Information</h4>
+                    <p style="margin: 0; color: var(--text-main);">
+                        <strong>Recipient:</strong> <span id="succ-name">Conscious Customer</span><br>
+                        <strong>Address:</strong> <span id="succ-address">Standard Eco-Delivery Route</span><br>
+                        <strong>Payment:</strong> <span id="succ-payment">PAID VIA UPI</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="products.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-shopping-bag"></i> Continue Shopping
+                </a>
+                <a href="impact.html" class="btn btn-outline btn-lg">
+                    <i class="fas fa-chart-line"></i> View Impact Dashboard
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border: none; padding: 1.5rem 0;">
+                <p>&copy; 2026 ImpactCart. All rights reserved.</p>
+                <p>Social Impact E-Commerce Platform.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderId = urlParams.get("orderId");
+            const orders = StateManager.getOrders();
+            
+            // Find order
+            const currentOrder = orders.find(o => o.id === orderId) || orders[0] || {
+                id: "IC2026-9F8A21",
+                customer: {
+                    name: "Pooja Sharma",
+                    address: "402 Green Enclave, Indiranagar, Bengaluru, 560038"
+                },
+                paymentMethod: "UPI",
+                calcs: { total: 1250 },
+                impact: {
+                    learningKits: 3,
+                    wasteReducedKg: 4.2,
+                    communityBeneficiaries: 4,
+                    ecoChoices: 2
+                }
+            };
+
+            document.getElementById("success-order-id").textContent = `Order ID: ${currentOrder.id}`;
+            document.getElementById("success-order-total").textContent = `₹${currentOrder.calcs ? currentOrder.calcs.total : 1250}`;
+            
+            // Calculate 4 days in future
+            const deliveryDate = new Date();
+            deliveryDate.setDate(deliveryDate.getDate() + 4);
+            document.getElementById("success-delivery-date").textContent = deliveryDate.toLocaleDateString("en-IN", {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric'
+            });
+
+            // Impact details
+            const imp = currentOrder.impact || {};
+            document.getElementById("succ-learning-kits").textContent = imp.learningKits || 3;
+            document.getElementById("succ-waste-kg").textContent = imp.wasteReducedKg || 4.2;
+            document.getElementById("succ-beneficiaries").textContent = imp.communityBeneficiaries || 4;
+            document.getElementById("succ-eco-choices").textContent = imp.ecoChoices || 2;
+
+            if (currentOrder.customer) {
+                document.getElementById("succ-name").textContent = currentOrder.customer.name;
+                document.getElementById("succ-address").textContent = `${currentOrder.customer.address}, ${currentOrder.customer.city || ''} - ${currentOrder.customer.pincode || ''}`;
+                document.getElementById("succ-payment").textContent = `Verified (${currentOrder.paymentMethod || 'UPI'})`;
+            }
+        });
+    </script>
+</body>
+</html>

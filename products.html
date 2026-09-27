@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products — ImpactCart Social Shopping</title>
+    <meta name="description" content="Explore our complete collection of eco-friendly, artisan-crafted, and educational social impact products.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <aside class="top-notice-bar" aria-label="Announcement">
+        🌱 <strong>Make an Impact:</strong> Every order planted in March receives 2x Impact Points &amp; free zero-waste shipping! <a href="impact.html">See our impact dashboard</a>
+    </aside>
+
+    <!-- Global Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand-logo" aria-label="ImpactCart Home">
+                <div class="logo-icon-wrap">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Primary Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="stories.html" class="nav-link">Stories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="header-action-btn search-trigger-btn" aria-label="Open Search Dialog" title="Search Products">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <a href="wishlist.html" class="header-action-btn" aria-label="View Wishlist" title="Your Wishlist">
+                    <i class="far fa-heart"></i>
+                    <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
+                </a>
+
+                <a href="cart.html" class="header-action-btn" aria-label="View Shopping Cart" title="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge-count cart-count-badge" style="display: none;">0</span>
+                </a>
+
+                <button class="menu-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="drawer-header">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+            <button class="header-action-btn nav-overlay" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="drawer-nav-list">
+            <a href="index.html" class="drawer-nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="products.html" class="drawer-nav-link active"><i class="fas fa-th-large"></i> Products</a>
+            <a href="categories.html" class="drawer-nav-link"><i class="fas fa-tags"></i> Categories</a>
+            <a href="impact.html" class="drawer-nav-link"><i class="fas fa-chart-line"></i> Impact Dashboard</a>
+            <a href="stories.html" class="drawer-nav-link"><i class="fas fa-book-reader"></i> Impact Stories</a>
+            <a href="about.html" class="drawer-nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html" class="drawer-nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+            <a href="wishlist.html" class="drawer-nav-link"><i class="fas fa-heart text-danger"></i> Wishlist</a>
+            <a href="cart.html" class="drawer-nav-link"><i class="fas fa-shopping-cart text-emerald"></i> Cart</a>
+        </nav>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-label="Search Products">
+        <div class="search-modal-card">
+            <form id="global-search-form" class="search-input-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="global-search-input" placeholder="Search eco products, artisan crafts, notebooks..." autocomplete="off">
+                <button type="button" id="close-search-modal" class="search-close-btn" aria-label="Close Search">&times;</button>
+            </form>
+            <div class="quick-search-tags">
+                <span>Trending Searches:</span>
+                <a href="products.html?search=notebook" class="quick-tag">Notebook</a>
+                <a href="products.html?search=bamboo" class="quick-tag">Bamboo</a>
+                <a href="products.html?search=jute" class="quick-tag">Jute Bag</a>
+                <a href="products.html?category=education" class="quick-tag">Education</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="section">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span>Products Catalog</span>
+            </nav>
+
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem; max-width: 100%;">
+                <div class="section-badge">Impact Marketplace</div>
+                <h1 class="heading-lg">Discover Products That Give Back</h1>
+                <p class="section-desc">Every single item is sourced from ethical artisan clusters and verified social initiatives.</p>
+            </div>
+
+            <!-- Catalog Layout with Filters -->
+            <div class="catalog-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filter-sidebar" aria-label="Product Filters">
+                    <div class="filter-sidebar-header">
+                        <h3><i class="fas fa-filter text-emerald"></i> Filters</h3>
+                        <button type="button" id="reset-filters-btn" class="clear-filters-btn">Clear All</button>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <div class="filter-title">Category</div>
+                        <div class="filter-list" id="category-filter-list">
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="category-filter" value="all" checked> All Categories
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="category-filter" value="education"> 📚 Education
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="category-filter" value="eco-friendly"> 🌱 Eco-Friendly
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="category-filter" value="handmade"> 🎨 Handmade
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="category-filter" value="community"> 🤝 Community
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="category-filter" value="gifts"> 🎁 Meaningful Gifts
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Range Filter -->
+                    <div class="filter-group">
+                        <div class="filter-title">Max Price</div>
+                        <input type="range" id="price-range" class="price-range-slider" min="120" max="1500" step="50" value="1500">
+                        <div class="price-range-val">
+                            <span>₹120</span>
+                            <span id="price-range-display">₹1500</span>
+                        </div>
+                    </div>
+
+                    <!-- Impact Cause Filter -->
+                    <div class="filter-group">
+                        <div class="filter-title">Impact Type</div>
+                        <div class="filter-list">
+                            <label class="filter-checkbox-label">
+                                <input type="checkbox" class="impact-filter-chk" value="education"> Supports Education
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="checkbox" class="impact-filter-chk" value="eco"> Waste Diverted
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="checkbox" class="impact-filter-chk" value="handmade"> Artisan Wages
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="checkbox" class="impact-filter-chk" value="community"> Fair Trade / Community
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <div class="filter-title">Customer Rating</div>
+                        <div class="filter-list">
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="rating-filter" value="0" checked> Any Rating
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="rating-filter" value="4.8"> ★ 4.8 &amp; above
+                            </label>
+                            <label class="filter-checkbox-label">
+                                <input type="radio" name="rating-filter" value="4.6"> ★ 4.6 &amp; above
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Catalog Content Area -->
+                <div class="catalog-content">
+                    <!-- Toolbar (Search + Sort + Results count) -->
+                    <div class="catalog-toolbar">
+                        <div class="catalog-search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="catalog-search-input" placeholder="Search by name, cause or material...">
+                        </div>
+
+                        <div class="catalog-sort-box">
+                            <label for="catalog-sort-select">Sort by:</label>
+                            <select id="catalog-sort-select">
+                                <option value="featured">✨ Featured</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="impact">Highest Impact Points</option>
+                                <option value="name">Product Name (A-Z)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="product-grid" id="catalog-products-grid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+
+                    <!-- Empty State (Shown when no results match) -->
+                    <div id="catalog-empty-state" class="empty-state" style="display: none;">
+                        <div class="empty-state-icon"><i class="fas fa-search-minus"></i></div>
+                        <h3>No matching products found</h3>
+                        <p>Try adjusting your category, price slider, or clear your active search query.</p>
+                        <button type="button" id="empty-state-reset-btn" class="btn btn-primary">Reset All Filters</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo" style="color: #ffffff;">
+                        <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                        <div class="brand-name">Impact<span style="color: #34d399;">Cart</span></div>
+                    </a>
+                    <p>“Shop with Purpose. Create an Impact.” A conscious e-commerce ecosystem empowering artisans, students, and sustainable living.</p>
+                    <div class="footer-social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Cause Categories</a></li>
+                        <li><a href="impact.html">Impact Dashboard</a></li>
+                        <li><a href="stories.html">Impact Stories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Customer Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="contact.html#faq">FAQ &amp; Help Center</a></li>
+                        <li><a href="contact.html#shipping">Shipping Information</a></li>
+                        <li><a href="contact.html#returns">Returns &amp; Refunds</a></li>
+                        <li><a href="wishlist.html">Your Wishlist</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Stay Inspired</h4>
+                    <p style="font-size: 0.875rem; color: #94a3b8; margin-bottom: 1rem;">Subscribe to our monthly impact digest with artisan stories and sustainable lifestyle guides.</p>
+                    <form class="footer-newsletter" onsubmit="event.preventDefault(); Toast.show('Subscribed to ImpactCart updates! 🌱', 'success'); this.reset();">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                        <button type="submit" class="btn btn-primary btn-block btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ImpactCart. All rights reserved. Built with pride for social change.</p>
+                <p>Transparent Impact Guarantee.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.getElementById("catalog-products-grid");
+            const emptyState = document.getElementById("catalog-empty-state");
+            const searchInput = document.getElementById("catalog-search-input");
+            const sortSelect = document.getElementById("catalog-sort-select");
+            const priceSlider = document.getElementById("price-range");
+            const priceDisplay = document.getElementById("price-range-display");
+            const categoryRadios = document.querySelectorAll('input[name="category-filter"]');
+            const ratingRadios = document.querySelectorAll('input[name="rating-filter"]');
+            const impactCheckboxes = document.querySelectorAll('.impact-filter-chk');
+            const resetBtn = document.getElementById("reset-filters-btn");
+            const emptyResetBtn = document.getElementById("empty-state-reset-btn");
+
+            // URL Parameters Parsing (e.g. ?category=education or ?search=bamboo)
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialCategory = urlParams.get("category");
+            const initialSearch = urlParams.get("search");
+
+            if (initialCategory) {
+                const targetRadio = document.querySelector(`input[name="category-filter"][value="${initialCategory}"]`);
+                if (targetRadio) targetRadio.checked = true;
+            }
+
+            if (initialSearch) {
+                searchInput.value = initialSearch;
+            }
+
+            function applyFiltersAndRender() {
+                const query = searchInput.value.trim().toLowerCase();
+                const selectedCategory = document.querySelector('input[name="category-filter"]:checked').value;
+                const maxPrice = parseFloat(priceSlider.value);
+                const minRating = parseFloat(document.querySelector('input[name="rating-filter"]:checked').value);
+                const sortMode = sortSelect.value;
+
+                // Checked impact types
+                const selectedImpacts = Array.from(impactCheckboxes)
+                    .filter(chk => chk.checked)
+                    .map(chk => chk.value);
+
+                priceDisplay.textContent = `₹${maxPrice}`;
+
+                // Filter logic
+                let filtered = IMPACT_PRODUCTS.filter(p => {
+                    // Search match (name, description, category, or badge)
+                    const matchesQuery = !query || 
+                        p.name.toLowerCase().includes(query) || 
+                        p.description.toLowerCase().includes(query) ||
+                        p.category.toLowerCase().includes(query) ||
+                        p.badge.toLowerCase().includes(query);
+
+                    // Category match
+                    const matchesCategory = selectedCategory === "all" || p.categorySlug === selectedCategory;
+
+                    // Price match
+                    const matchesPrice = p.price <= maxPrice;
+
+                    // Rating match
+                    const matchesRating = p.rating >= minRating;
+
+                    // Impact types match
+                    const matchesImpact = selectedImpacts.length === 0 || selectedImpacts.includes(p.impactType);
+
+                    return matchesQuery && matchesCategory && matchesPrice && matchesRating && matchesImpact;
+                });
+
+                // Sort logic
+                if (sortMode === "price-asc") {
+                    filtered.sort((a, b) => a.price - b.price);
+                } else if (sortMode === "price-desc") {
+                    filtered.sort((a, b) => b.price - a.price);
+                } else if (sortMode === "rating") {
+                    filtered.sort((a, b) => b.rating - a.rating);
+                } else if (sortMode === "impact") {
+                    filtered.sort((a, b) => b.impactPoints - a.impactPoints);
+                } else if (sortMode === "name") {
+                    filtered.sort((a, b) => a.name.localeCompare(b.name));
+                } else {
+                    // Featured first
+                    filtered.sort((a, b) => (b.isFeatured ? 1 : 0) - (a.isFeatured ? 1 : 0));
+                }
+
+                // Render products
+                if (filtered.length === 0) {
+                    grid.innerHTML = "";
+                    emptyState.style.display = "block";
+                } else {
+                    emptyState.style.display = "none";
+                    grid.innerHTML = filtered.map(p => renderProductCard(p)).join("");
+                }
+            }
+
+            // Event Listeners
+            searchInput.addEventListener("input", applyFiltersAndRender);
+            sortSelect.addEventListener("change", applyFiltersAndRender);
+            priceSlider.addEventListener("input", applyFiltersAndRender);
+            categoryRadios.forEach(r => r.addEventListener("change", applyFiltersAndRender));
+            ratingRadios.forEach(r => r.addEventListener("change", applyFiltersAndRender));
+            impactCheckboxes.forEach(chk => chk.addEventListener("change", applyFiltersAndRender));
+
+            function resetFilters() {
+                searchInput.value = "";
+                priceSlider.value = 1500;
+                document.querySelector('input[name="category-filter"][value="all"]').checked = true;
+                document.querySelector('input[name="rating-filter"][value="0"]').checked = true;
+                impactCheckboxes.forEach(chk => chk.checked = false);
+                sortSelect.value = "featured";
+                applyFiltersAndRender();
+            }
+
+            if (resetBtn) resetBtn.addEventListener("click", resetFilters);
+            if (emptyResetBtn) emptyResetBtn.addEventListener("click", resetFilters);
+
+            // Initial render
+            applyFiltersAndRender();
+        });
+    </script>
+</body>
+</html>

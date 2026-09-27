@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Stories — Voices of Change | ImpactCart</title>
+    <meta name="description" content="Read inspiring stories of how conscious shopping transforms the lives of artisans, students, and local ecosystems.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Notice Bar -->
+    <aside class="top-notice-bar" aria-label="Announcement">
+        🌱 <strong>Make an Impact:</strong> Every order planted in March receives 2x Impact Points &amp; free zero-waste shipping! <a href="impact.html">See our impact dashboard</a>
+    </aside>
+
+    <!-- Global Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand-logo" aria-label="ImpactCart Home">
+                <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Primary Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="impact.html" class="nav-link">Impact</a>
+                <a href="stories.html" class="nav-link active">Stories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="header-action-btn search-trigger-btn" aria-label="Open Search Dialog" title="Search Products">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <a href="wishlist.html" class="header-action-btn" aria-label="View Wishlist" title="Your Wishlist">
+                    <i class="far fa-heart"></i>
+                    <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
+                </a>
+
+                <a href="cart.html" class="header-action-btn" aria-label="View Shopping Cart" title="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge-count cart-count-badge" style="display: none;">0</span>
+                </a>
+
+                <button class="menu-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="drawer-header">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+            <button class="header-action-btn nav-overlay" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="drawer-nav-list">
+            <a href="index.html" class="drawer-nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="products.html" class="drawer-nav-link"><i class="fas fa-th-large"></i> Products</a>
+            <a href="categories.html" class="drawer-nav-link"><i class="fas fa-tags"></i> Categories</a>
+            <a href="impact.html" class="drawer-nav-link"><i class="fas fa-chart-line"></i> Impact Dashboard</a>
+            <a href="stories.html" class="drawer-nav-link active"><i class="fas fa-book-reader"></i> Impact Stories</a>
+            <a href="about.html" class="drawer-nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html" class="drawer-nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+            <a href="wishlist.html" class="drawer-nav-link"><i class="fas fa-heart text-danger"></i> Wishlist</a>
+            <a href="cart.html" class="drawer-nav-link"><i class="fas fa-shopping-cart text-emerald"></i> Cart</a>
+        </nav>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="section">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span>Impact Stories</span>
+            </nav>
+
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-book-open"></i> Grassroots Chronicles</div>
+                <h1 class="heading-lg section-title">Real Lives, Real Transformation</h1>
+                <p class="section-desc">Behind every product is a human story of dignity, education, and ecological restoration. (Curated sample impact narratives).</p>
+            </div>
+
+            <!-- Stories Grid (6 Stories) -->
+            <div class="product-grid" id="stories-grid" style="grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
+                <!-- Populated dynamically by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Story Full Modal Dialog -->
+    <div id="story-modal" class="search-modal" role="dialog" aria-modal="true" aria-label="Full Impact Story">
+        <div class="search-modal-card" style="max-width: 720px; padding: 0; overflow: hidden;">
+            <div style="position: relative; height: 260px;">
+                <img id="modal-story-img" src="" alt="Story Image" style="width: 100%; height: 100%; object-fit: cover;">
+                <button type="button" id="close-story-modal" style="position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; background: rgba(0,0,0,0.6); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">&times;</button>
+            </div>
+            <div style="padding: 2rem;">
+                <span id="modal-story-badge" class="product-category-label"></span>
+                <h2 id="modal-story-title" style="font-size: 1.5rem; margin: 0.5rem 0 1rem;"></h2>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;" id="modal-story-meta"></div>
+                <div class="story-quote-box" id="modal-story-quote"></div>
+                <p id="modal-story-full" style="font-size: 1rem; line-height: 1.8; color: var(--text-main); margin-bottom: 1.5rem;"></p>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Inspired to support this cause?</span>
+                    <a id="modal-story-product-link" href="products.html" class="btn btn-primary btn-sm">
+                        <i class="fas fa-shopping-bag"></i> View Associated Product
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo" style="color: #ffffff;">
+                        <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                        <div class="brand-name">Impact<span style="color: #34d399;">Cart</span></div>
+                    </a>
+                    <p>“Shop with Purpose. Create an Impact.” A conscious e-commerce ecosystem empowering artisans, students, and sustainable living.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Cause Categories</a></li>
+                        <li><a href="impact.html">Impact Dashboard</a></li>
+                        <li><a href="stories.html">Impact Stories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Customer Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="contact.html#faq">FAQ &amp; Help Center</a></li>
+                        <li><a href="contact.html#shipping">Shipping Information</a></li>
+                        <li><a href="contact.html#returns">Returns &amp; Refunds</a></li>
+                        <li><a href="wishlist.html">Your Wishlist</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Stay Inspired</h4>
+                    <form class="footer-newsletter" onsubmit="event.preventDefault(); Toast.show('Subscribed! 🌱', 'success'); this.reset();">
+                        <input type="email" placeholder="Enter your email" required aria-label="Email">
+                        <button type="submit" class="btn btn-primary btn-block btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ImpactCart. All rights reserved.</p>
+                <p>Social Impact Narratives.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.getElementById("stories-grid");
+            const modal = document.getElementById("story-modal");
+            const closeModal = document.getElementById("close-story-modal");
+
+            grid.innerHTML = IMPACT_STORIES_DATA.map(story => {
+                return `
+                    <article class="story-card" id="story-${story.id}">
+                        <img src="${story.image}" alt="${story.title}" class="story-card-img" loading="lazy">
+                        <div class="story-card-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span class="product-category-label">${story.categoryBadge}</span>
+                                <small style="font-size: 0.775rem; color: var(--text-muted);"><i class="fas fa-map-marker-alt"></i> ${story.location}</small>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">${story.title}</h3>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.6;">${story.excerpt}</p>
+                            
+                            <div class="story-quote-box">"${story.quote}"</div>
+                            
+                            <div style="margin-top: auto; padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                                <button type="button" class="btn btn-outline btn-sm" onclick="openStoryModal(${story.id})">
+                                    Read Full Story <i class="fas fa-arrow-right"></i>
+                                </button>
+                                <a href="product-details.html?id=${story.relatedProductId}" class="btn btn-primary btn-sm" title="View associated product">
+                                    <i class="fas fa-shopping-bag"></i> Support
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join("");
+
+            window.openStoryModal = function(storyId) {
+                const story = IMPACT_STORIES_DATA.find(s => s.id === storyId);
+                if (!story) return;
+
+                document.getElementById("modal-story-img").src = story.image;
+                document.getElementById("modal-story-badge").textContent = story.categoryBadge;
+                document.getElementById("modal-story-title").textContent = story.title;
+                document.getElementById("modal-story-meta").innerHTML = `<strong>Beneficiary:</strong> ${story.beneficiary} &bull; <i class="fas fa-map-marker-alt"></i> ${story.location}`;
+                document.getElementById("modal-story-quote").textContent = `"${story.quote}"`;
+                document.getElementById("modal-story-full").textContent = story.fullStory;
+                document.getElementById("modal-story-product-link").href = `product-details.html?id=${story.relatedProductId}`;
+
+                modal.classList.add("active");
+            };
+
+            closeModal.addEventListener("click", () => modal.classList.remove("active"));
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) modal.classList.remove("active");
+            });
+
+            // Check if URL has hash (e.g. stories.html#story-2)
+            if (window.location.hash) {
+                const id = parseInt(window.location.hash.replace("#story-", ""));
+                if (id) {
+                    setTimeout(() => openStoryModal(id), 200);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

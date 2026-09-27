@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Dashboard — Your Social Return | ImpactCart</title>
+    <meta name="description" content="Track and visualize your personal and collective social and environmental impact score.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Notice Bar -->
+    <aside class="top-notice-bar" aria-label="Announcement">
+        🌱 <strong>Make an Impact:</strong> Every order planted in March receives 2x Impact Points &amp; free zero-waste shipping! <a href="impact.html">See our impact dashboard</a>
+    </aside>
+
+    <!-- Global Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand-logo" aria-label="ImpactCart Home">
+                <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Primary Navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="impact.html" class="nav-link active">Impact</a>
+                <a href="stories.html" class="nav-link">Stories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="header-action-btn search-trigger-btn" aria-label="Open Search Dialog" title="Search Products">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <a href="wishlist.html" class="header-action-btn" aria-label="View Wishlist" title="Your Wishlist">
+                    <i class="far fa-heart"></i>
+                    <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
+                </a>
+
+                <a href="cart.html" class="header-action-btn" aria-label="View Shopping Cart" title="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge-count cart-count-badge" style="display: none;">0</span>
+                </a>
+
+                <button class="menu-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="drawer-header">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                <div class="brand-name">Impact<span>Cart</span></div>
+            </a>
+            <button class="header-action-btn nav-overlay" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="drawer-nav-list">
+            <a href="index.html" class="drawer-nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="products.html" class="drawer-nav-link"><i class="fas fa-th-large"></i> Products</a>
+            <a href="categories.html" class="drawer-nav-link"><i class="fas fa-tags"></i> Categories</a>
+            <a href="impact.html" class="drawer-nav-link active"><i class="fas fa-chart-line"></i> Impact Dashboard</a>
+            <a href="stories.html" class="drawer-nav-link"><i class="fas fa-book-reader"></i> Impact Stories</a>
+            <a href="about.html" class="drawer-nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html" class="drawer-nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1rem 0;">
+            <a href="wishlist.html" class="drawer-nav-link"><i class="fas fa-heart text-danger"></i> Wishlist</a>
+            <a href="cart.html" class="drawer-nav-link"><i class="fas fa-shopping-cart text-emerald"></i> Cart</a>
+        </nav>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <main class="section">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span>Impact Dashboard</span>
+            </nav>
+
+            <!-- Dashboard Hero with Circular Score Gauge -->
+            <div class="impact-dashboard-hero">
+                <div>
+                    <div class="section-badge" style="background: rgba(255,255,255,0.2); color: #ffffff;">
+                        <i class="fas fa-award"></i> Verified Social Return
+                    </div>
+                    <h1 class="heading-lg" style="color: #ffffff; margin-bottom: 0.75rem;">Your Shopping Impact</h1>
+                    <p style="color: #a7f3d0; font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                        Every rupee spent on ImpactCart translates into direct support for education, waste diversion, and artisan livelihoods. Here is your collective impact score.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <span class="impact-pill" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">
+                            <i class="fas fa-user-check"></i> Impact Tier: <strong>Changemaker</strong>
+                        </span>
+                        <span class="impact-pill" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">
+                            <i class="fas fa-calendar-alt"></i> Active Period: <strong>2026</strong>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Circular Progress Score -->
+                <div class="score-gauge-wrap">
+                    <div class="circular-gauge" id="score-gauge">
+                        <div class="circular-gauge-inner">
+                            <span class="gauge-score-num" id="impact-score-num">78</span>
+                            <span class="gauge-score-label">Score / 100</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; text-align: center; color: #a7f3d0; font-size: 0.85rem; font-weight: 600;">
+                        🌟 Top 15% Conscious Shoppers
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 Big Impact Metric Cards -->
+            <div class="stats-grid" style="margin-bottom: 3.5rem;">
+                <div class="stat-card" style="background: #ffffff; text-align: left; padding: 1.75rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <span class="stat-icon text-blue" style="margin: 0;"><i class="fas fa-book-reader"></i></span>
+                        <span class="section-badge blue" style="margin: 0; font-size: 0.75rem;">Education</span>
+                    </div>
+                    <div class="stat-number text-blue" id="dash-edu-kits" data-target="12" data-suffix=" Kits">12 Kits</div>
+                    <div class="stat-label" style="font-size: 0.95rem; color: var(--text-main);">Learning Kits Sponsored</div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Equipped rural elementary students with recycled paper books &amp; pencils.</p>
+                </div>
+
+                <div class="stat-card" style="background: #ffffff; text-align: left; padding: 1.75rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <span class="stat-icon text-emerald" style="margin: 0;"><i class="fas fa-leaf"></i></span>
+                        <span class="section-badge" style="margin: 0; font-size: 0.75rem;">Environment</span>
+                    </div>
+                    <div class="stat-number text-emerald" id="dash-waste-kg" data-target="18" data-suffix=".4 kg">18.4 kg</div>
+                    <div class="stat-label" style="font-size: 0.95rem; color: var(--text-main);">Plastic &amp; Waste Reduced</div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Eliminated single-use shopping bags, disposable cutlery &amp; PET flasks.</p>
+                </div>
+
+                <div class="stat-card" style="background: #ffffff; text-align: left; padding: 1.75rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <span class="stat-icon text-amber" style="margin: 0;"><i class="fas fa-hands-helping"></i></span>
+                        <span class="section-badge" style="background: #fef3c7; color: #b45309; margin: 0; font-size: 0.75rem;">Community</span>
+                    </div>
+                    <div class="stat-number text-amber" id="dash-beneficiaries" data-target="24" data-suffix=" People">24 People</div>
+                    <div class="stat-label" style="font-size: 0.95rem; color: var(--text-main);">Beneficiaries Supported</div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Direct fair wages paid to women jute weavers, potters, and tea growers.</p>
+                </div>
+
+                <div class="stat-card" style="background: #ffffff; text-align: left; padding: 1.75rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <span class="stat-icon text-emerald" style="margin: 0;"><i class="fas fa-recycle"></i></span>
+                        <span class="section-badge" style="background: #f0fdfa; color: #0f766e; margin: 0; font-size: 0.75rem;">Eco Choices</span>
+                    </div>
+                    <div class="stat-number text-emerald" id="dash-eco-choices" data-target="15" data-suffix=" Items">15 Items</div>
+                    <div class="stat-label" style="font-size: 0.95rem; color: var(--text-main);">Sustainable Choices</div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Biodegradable seed calendars, bamboo flasks, and zero-chemical items.</p>
+                </div>
+            </div>
+
+            <!-- Monthly Impact History Chart (Pure CSS Bars) -->
+            <div class="chart-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h2 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Monthly Impact Growth (2026)</h2>
+                        <p style="font-size: 0.875rem; color: var(--text-muted);">Points accumulated from conscious purchases over the past 6 months (Demonstration Data).</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; font-weight: 600;">
+                        <span style="display: flex; align-items: center; gap: 0.4rem;"><span style="width: 12px; height: 12px; border-radius: 3px; background: var(--primary);"></span> Impact Points</span>
+                    </div>
+                </div>
+
+                <div class="chart-bars-wrap">
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 35%;" title="January: 35 pts">
+                            <span class="chart-bar-val">35</span>
+                        </div>
+                        <span class="chart-month-label">Jan</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 48%;" title="February: 48 pts">
+                            <span class="chart-bar-val">48</span>
+                        </div>
+                        <span class="chart-month-label">Feb</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 60%;" title="March: 60 pts">
+                            <span class="chart-bar-val">60</span>
+                        </div>
+                        <span class="chart-month-label">Mar</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 52%;" title="April: 52 pts">
+                            <span class="chart-bar-val">52</span>
+                        </div>
+                        <span class="chart-month-label">Apr</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 70%;" title="May: 70 pts">
+                            <span class="chart-bar-val">70</span>
+                        </div>
+                        <span class="chart-month-label">May</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 78%;" title="June: 78 pts">
+                            <span class="chart-bar-val">78</span>
+                        </div>
+                        <span class="chart-month-label">Jun</span>
+                    </div>
+                </div>
+                <div style="font-size: 0.775rem; color: var(--text-light); text-align: right; margin-top: 0.5rem;">* Illustrative sample chart data</div>
+            </div>
+
+            <!-- How Your Purchase Helps Section -->
+            <div class="section-header" style="text-align: left; margin: 4rem 0 2rem;">
+                <div class="section-badge">Behind the Numbers</div>
+                <h2 class="heading-lg">How Different Product Categories Create Impact</h2>
+                <p class="section-desc">We convert everyday commerce into direct community funding through four clear mechanisms.</p>
+            </div>
+
+            <div class="product-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.75rem; margin-bottom: 4rem;">
+                <div class="cart-card" style="border-top: 4px solid #2563eb;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; color: #1d4ed8;"><i class="fas fa-book-open"></i> 📚 Education Products</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                        <strong>Demo Rule: +10 to +18 Points</strong><br>
+                        Each notebook, solar study lamp, or plantable kit funds stationery and solar reading lights for students in rural classrooms.
+                    </p>
+                </div>
+
+                <div class="cart-card" style="border-top: 4px solid #16a34a;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; color: #047857;"><i class="fas fa-leaf"></i> 🌱 Eco-Friendly Products</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                        <strong>Demo Rule: +8 to +16 Points</strong><br>
+                        Calculated by plastic weight avoided and organic materials substituted. Replaces single-use plastics with natural bamboo &amp; jute.
+                    </p>
+                </div>
+
+                <div class="cart-card" style="border-top: 4px solid #d97706;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; color: #b45309;"><i class="fas fa-paint-brush"></i> 🎨 Handmade Crafts</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                        <strong>Demo Rule: +7 to +14 Points</strong><br>
+                        Guarantees ethical hourly compensation to pottery guilds, hand-block printers, and woodcarvers without middlemen.
+                    </p>
+                </div>
+
+                <div class="cart-card" style="border-top: 4px solid #0d9488;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; color: #0f766e;"><i class="fas fa-hands-helping"></i> 🤝 Community Initiatives</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                        <strong>Demo Rule: +9 to +20 Points</strong><br>
+                        Provides healthcare fund subsidies and clean drinking water access for smallholder organic farmers and weaving collectives.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Interactive Impact Budget Simulator -->
+            <div style="background: var(--bg-surface); border: 1.5px solid var(--border-color); border-radius: var(--radius-xl); padding: 3rem 2.5rem; box-shadow: var(--shadow-sm);">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <div class="section-badge"><i class="fas fa-sliders-h"></i> Interactive Simulator</div>
+                    <h2 class="heading-md">Simulate Your Annual Impact</h2>
+                    <p class="section-desc">See the projected annual change you can create by shifting your routine shopping budget to conscious products.</p>
+                </div>
+
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <div style="display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 0.5rem;">
+                        <span>Monthly Conscious Budget:</span>
+                        <span id="sim-budget-display" class="text-emerald" style="font-size: 1.25rem;">₹1,000 / month</span>
+                    </div>
+                    <input type="range" id="sim-budget-slider" min="250" max="5000" step="250" value="1000" style="width: 100%; accent-color: var(--primary); margin-bottom: 2rem;">
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
+                        <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md);">
+                            <div id="sim-edu-result" style="font-size: 1.75rem; font-weight: 800; color: var(--secondary);">24</div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">School Kits Funded / Year</div>
+                        </div>
+                        <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md);">
+                            <div id="sim-waste-result" style="font-size: 1.75rem; font-weight: 800; color: var(--primary);">36 kg</div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Waste Diverted / Year</div>
+                        </div>
+                        <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md);">
+                            <div id="sim-artisans-result" style="font-size: 1.75rem; font-weight: 800; color: var(--accent-amber);">18</div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Artisans Supported</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo" style="color: #ffffff;">
+                        <div class="logo-icon-wrap"><i class="fas fa-shopping-basket"></i></div>
+                        <div class="brand-name">Impact<span style="color: #34d399;">Cart</span></div>
+                    </a>
+                    <p>“Shop with Purpose. Create an Impact.” A conscious e-commerce ecosystem empowering artisans, students, and sustainable living.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Cause Categories</a></li>
+                        <li><a href="impact.html">Impact Dashboard</a></li>
+                        <li><a href="stories.html">Impact Stories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Customer Support</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="contact.html#faq">FAQ &amp; Help Center</a></li>
+                        <li><a href="contact.html#shipping">Shipping Information</a></li>
+                        <li><a href="contact.html#returns">Returns &amp; Refunds</a></li>
+                        <li><a href="wishlist.html">Your Wishlist</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Stay Inspired</h4>
+                    <form class="footer-newsletter" onsubmit="event.preventDefault(); Toast.show('Subscribed! 🌱', 'success'); this.reset();">
+                        <input type="email" placeholder="Enter your email" required aria-label="Email">
+                        <button type="submit" class="btn btn-primary btn-block btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ImpactCart. All rights reserved.</p>
+                <p>Demonstration Impact Dashboard.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Load cumulative impact
+            const impact = StateManager.getCumulativeImpact();
+            
+            document.getElementById("impact-score-num").textContent = impact.totalImpactPoints;
+            document.getElementById("dash-edu-kits").textContent = `${impact.learningKits} Kits`;
+            document.getElementById("dash-waste-kg").textContent = `${impact.wasteReducedKg} kg`;
+            document.getElementById("dash-beneficiaries").textContent = `${impact.communityBeneficiaries} People`;
+            document.getElementById("dash-eco-choices").textContent = `${impact.ecoChoices} Items`;
+
+            // Adjust conic gradient based on score
+            const deg = Math.min(360, Math.round((impact.totalImpactPoints / 100) * 360));
+            document.getElementById("score-gauge").style.background = `conic-gradient(#10b981 0deg ${deg}deg, rgba(255, 255, 255, 0.2) ${deg}deg 360deg)`;
+
+            // Simulator logic
+            const slider = document.getElementById("sim-budget-slider");
+            const display = document.getElementById("sim-budget-display");
+            const eduRes = document.getElementById("sim-edu-result");
+            const wasteRes = document.getElementById("sim-waste-result");
+            const artRes = document.getElementById("sim-artisans-result");
+
+            function updateSimulator() {
+                const val = parseInt(slider.value);
+                display.textContent = `₹${val.toLocaleString()} / month`;
+                
+                // Simulation formula
+                const annualEdu = Math.round((val / 1000) * 24);
+                const annualWaste = Math.round((val / 1000) * 36);
+                const annualArtisans = Math.round((val / 1000) * 18);
+
+                eduRes.textContent = annualEdu;
+                wasteRes.textContent = `${annualWaste} kg`;
+                artRes.textContent = annualArtisans;
+            }
+
+            slider.addEventListener("input", updateSimulator);
+            updateSimulator();
+        });
+    </script>
+</body>
+</html>
